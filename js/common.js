@@ -43,13 +43,10 @@ $(document).ready(function(){
             $(this).removeClass('active');
             $('header .gnb').removeClass('active');
             $('nav ul').removeAttr('style');
-            // $('body').removeAttr('style scrolly');
             scroll_callback.clear();
         } else {
             $(this).addClass('active');
             $('header .gnb').addClass('active');
-            // scroll_fixed();
-            // console.log('if');
             scroll_callback.fixed();
         }
     });
@@ -103,7 +100,6 @@ $(document).ready(function(){
     /* datepicker */
     $( ".datepicker").datepicker({
         onSelect: function(dateString) {
-            console.log(dateString.length);
             if(dateString.length > 0){
                 $(this).siblings('i').hide();
             } else {
