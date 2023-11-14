@@ -1,0 +1,32 @@
+input[type="text"], input[type="email"], input[type="number"], input[type="tel"], input[type="password"], input[type="url"], input[type="search"], input[type="file"], textarea {height:42px; padding:0 15px; background-color:#fff; border:1px solid #e8e5e2; border-radius:0; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none;}
+
+label.input, label.select {position:relative; display:block; flex:1;}
+label.input i {color:#aaa; font-size:16px; font-style:normal; line-height:18px; position:absolute; top:11px; left:15px;}/* placeholder */
+label.input input[type='text'], label.input input[type='password'], label.input input[type='number'] {width:100%; font-size:16px; font-family:'MyLotte'; line-height:18px;}
+label.input > em {margin-top:5px; color:#ff7200; font-size:12px; font-family:'Noto Sans'; line-height:18px; display:none;}
+label.input.err > em {display:block;}
+label.input * {flex:1 auto;}
+
+label.input button[class*='icon_'] {width:24px; height:24px; font-size:0; background-repeat:no-repeat; position:absolute; top:10px; right:10px; z-index:1; display:none;}
+label.input button[class*='icon_'] + button[class*='icon_'] {margin-right:34px;}
+label.input button.icon_del {background:url('../images/common/icon_search_del.png') 50% no-repeat; background-size:cover; border:0;}
+label.input button.icon_pss.active, label.input  button.icon_pss {background-size:cover;}
+label.input button.icon_pss.active {background-image:url('../images/common/icon_pass_view.png');}
+label.input button.icon_pss {background-image:url('../images/common/icon_pass_hide.png'); border:0;}
+
+.label_wrap {position:relative; flex:1; display:flex; gap:10px;}
+
+.label_wrap + .label_wrap {margin-top:10px;}
+
+
+/* input + button */
+label.input div {display:flex;}
+label.input div input {width:auto !important; margin-right:8px;}
+label.input div input + [class*='btn_'] {flex:0 auto !important;}
+
+.select_form select{height:42px;}
+
+.form_group > li + li {padding-top:20px;}
+.form_group .form_tit {margin-top:0; margin-bottom:6px; font-size:14px !important; font-family:'Noto Sans'; line-height:20px !important; text-align:left !important;}
+.form_group .form_tit em {color:#888; font-weight:400; display:inline-block;}
+.form_group .form_tit.required:after {margin-left:2px; color:#d60812; font-size:14px; content:'*'; display:inline-block;}

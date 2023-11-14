@@ -1,0 +1,13 @@
+#container {padding:60px 0 50px;}
+
+section {max-width:1200px; margin:0 auto;}
+section + section {margin-top:50px; padding-top:50px; border-top:1px dashed #ccc;}
+h4 {padding-left:10px; font-size:18px; font-weight:bold; position:relative; display:flex; justify-content:space-between;}
+h4:before {height:15px; border-left:3px solid #ff7200; content:''; position:absolute; top:5px; left:0; display:inline-block;}
+
+h4 button {padding:5px 10px; color:#fff; font-size:14px; background-color:#df262b; border:0; border-radius:50px;}
+
+.design_box {margin-top:10px; padding:10px; border:1px solid #ddd; position:relative;}
+.code_box {margin-top:20px; padding:20px; background-color:#000; border-radius:4px; overflow:auto; display:none;}
+.code_box.active {display:block;}
+.code_box code {color:#fff;}
