@@ -13,28 +13,29 @@
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
     <link rel="stylesheet" type="text/css" href="./css/form.css" />
     <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css" />
-    
-    <script>
-        $(function(){
-            var title = document.querySelectorAll('h4');
+</head>
 
-            title.forEach(function(o){
-                _btn = document.createElement('button');
-                _btn.innerHTML = 'View Source';
-                o.append(_btn);
-                o.querySelector('button').addEventListener('click', function(b){
-                    if(!o.parentElement.querySelector('.code_box').classList.contains('active')){
-                        o.parentElement.querySelector('.code_box').classList.add('active');
-                        b.currentTarget.textContent = 'Hide Source';
-                    } else {
-                        o.parentElement.querySelector('.code_box').classList.remove('active');
-                        b.currentTarget.textContent = 'View Source';
-                    }
-                });
+<script>
+    $(function(){
+        var title = document.querySelectorAll('h4');
+
+        title.forEach(function(o){
+            _btn = document.createElement('button');
+            _btn.innerHTML = 'View Source';
+            o.append(_btn);
+            o.querySelector('button').addEventListener('click', function(b){
+                if(!o.parentElement.querySelector('.code_box').classList.contains('active')){
+                    o.parentElement.querySelector('.code_box').classList.add('active');
+                    b.currentTarget.textContent = 'Hide Source';
+                } else {
+                    o.parentElement.querySelector('.code_box').classList.remove('active');
+                    b.currentTarget.textContent = 'View Source';
+                }
             });
         });
-    </script>
-</head>
+    });
+</script>
+
 <body>
 
     <div id="skip">
