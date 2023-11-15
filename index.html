@@ -138,6 +138,102 @@
             </section>
 
             <section>
+                <h4>Check / Radio</h4>
+                <div class="design_box">
+                    <!-- switch -->
+                    <label class="check_ani">
+                        <input type="checkbox">
+                        <em>Switch</em>
+                    </label>
+                    <!-- //switch -->
+
+                    <!-- radio -->
+                    <label class="check">
+                        <input type="radio" />
+                        <em class="label">Radio</em>
+                    </label>
+                    <!-- //radio -->
+
+                    <!-- check -->
+                    <label class="check">
+                        <input type="checkbox" />
+                        <em class="label">Checkbox</em>
+                    </label>
+                    <!-- //check -->
+                    <div style="margin-top:20px;">
+                        <!-- check group -->
+                        <div class="check_group">
+                            <label class="check">
+                                <input type="radio" name="group" />
+                                <em class="label">Radio01</em>
+                            </label>
+                            <label class="check">
+                                <input type="radio" name="group" />
+                                <em class="label">Radio02</em>
+                            </label>
+                            <label class="check">
+                                <input type="radio" name="group" />
+                                <em class="label">Radio03</em>
+                            </label>
+                            <label class="check">
+                                <input type="radio" name="group" />
+                                <em class="label">Radio04</em>
+                            </label>
+                            <label class="check">
+                                <input type="radio" name="group" />
+                                <em class="label">Radio05</em>
+                            </label>
+                        </div>
+                        <!-- //check group -->
+                    </div>
+                </div>
+                <pre class="code_box"><code>&lt;!-- switch --&gt;
+&lt;label class="check_ani"&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;em&gt;Switch&lt;/em&gt;
+&lt;/label&gt;
+&lt;!-- //switch --&gt;
+
+&lt;!-- radio --&gt;
+&lt;label class="check"&gt;
+    &lt;input type="radio" /&gt;
+    &lt;em class="label"&gt;Radio&lt;/em&gt;
+&lt;/label&gt;
+&lt;!-- //radio --&gt;
+
+&lt;!-- check --&gt;
+&lt;label class="check"&gt;
+    &lt;input type="checkbox" /&gt;
+    &lt;em class="label"&gt;Checkbox&lt;/em&gt;
+&lt;/label&gt;
+&lt;!-- //check --&gt;
+
+&lt;!-- group의 경우 "check_group"으로 묶어 줌 --&gt;
+&lt;div class="check_group"&gt;
+    &lt;label class="check"&gt;
+        &lt;input type="radio" name="group" /&gt;
+        &lt;em class="label"&gt;Radio01&lt;/em&gt;
+    &lt;/label&gt;
+    &lt;label class="check"&gt;
+        &lt;input type="radio" name="group" /&gt;
+        &lt;em class="label"&gt;Radio02&lt;/em&gt;
+    &lt;/label&gt;
+    &lt;label class="check"&gt;
+        &lt;input type="radio" name="group" /&gt;
+        &lt;em class="label"&gt;Radio03&lt;/em&gt;
+    &lt;/label&gt;
+    &lt;label class="check"&gt;
+        &lt;input type="radio" name="group" /&gt;
+        &lt;em class="label"&gt;Radio04&lt;/em&gt;
+    &lt;/label&gt;
+    &lt;label class="check"&gt;
+        &lt;input type="radio" name="group" /&gt;
+        &lt;em class="label"&gt;Radio05&lt;/em&gt;
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section>
                 <h4>Input Form</h4>
                 <div class="design_box">
                     <ul class="form_group">
@@ -388,6 +484,88 @@
         &lt;a href="#none" class="next"&gt;다음&lt;/a&gt;
         &lt;a href="#none" class="last"&gt;마지막으로&lt;/a&gt;
     &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section>
+                <h4>만족도 조사</h4>
+                <div class="design_box">
+                    <div class="satisfaction">
+                        <ul>
+                            <li>
+                                <div class="check_group">
+                                    <label class="check">
+                                        <input type="radio" name="group" />
+                                        <em class="label">매우만족</em>
+                                    </label>
+                                    <label class="check">
+                                        <input type="radio" name="group" />
+                                        <em class="label">만족</em>
+                                    </label>
+                                    <label class="check">
+                                        <input type="radio" name="group" />
+                                        <em class="label">보통</em>
+                                    </label>
+                                    <label class="check">
+                                        <input type="radio" name="group" />
+                                        <em class="label">불만족</em>
+                                    </label>
+                                    <label class="check">
+                                        <input type="radio" name="group" />
+                                        <em class="label">매우불만족</em>
+                                    </label>
+                                </div>
+
+                                <button class="btn_mid btn_ok"><em>등록하기</em></button>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>담당부서</dt>
+                                    <dd>홍보전산과/김창호</dd>
+                                    <dt>연락처</dt>
+                                    <dd><a href="tel:063-620-6058">063-620-6058</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <pre class="code_box"><code>&lt;div class="satisfaction"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;div class="check_group"&gt;
+                &lt;label class="check"&gt;
+                    &lt;input type="radio" name="group" /&gt;
+                    &lt;em class="label"&gt;매우만족&lt;/em&gt;
+                &lt;/label&gt;
+                &lt;label class="check"&gt;
+                    &lt;input type="radio" name="group" /&gt;
+                    &lt;em class="label"&gt;만족&lt;/em&gt;
+                &lt;/label&gt;
+                &lt;label class="check"&gt;
+                    &lt;input type="radio" name="group" /&gt;
+                    &lt;em class="label"&gt;보통&lt;/em&gt;
+                &lt;/label&gt;
+                &lt;label class="check"&gt;
+                    &lt;input type="radio" name="group" /&gt;
+                    &lt;em class="label"&gt;불만족&lt;/em&gt;
+                &lt;/label&gt;
+                &lt;label class="check"&gt;
+                    &lt;input type="radio" name="group" /&gt;
+                    &lt;em class="label"&gt;매우불만족&lt;/em&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+
+            &lt;button class="btn_mid btn_ok"&gt;&lt;em&gt;등록하기&lt;/em&gt;&lt;/button&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;dl&gt;
+                &lt;dt&gt;담당부서&lt;/dt&gt;
+                &lt;dd&gt;홍보전산과/김창호&lt;/dd&gt;
+                &lt;dt&gt;연락처&lt;/dt&gt;
+                &lt;dd&gt;&lt;a href="tel:063-620-6058"&gt;063-620-6058&lt;/a&gt;&lt;/dd&gt;
+            &lt;/dl&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
             </section>
         </div>

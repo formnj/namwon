@@ -3,6 +3,7 @@
 
 .lockbody {height:100%; overflow:hidden;}
 body {color:#222; font-family:"Noto Sans KR", sans-serif; font-weight:400; line-height:1.4em;}
+*:before, *:after {box-sizing:border-box;}
 * {margin:0; padding:0; list-style:none; box-sizing:border-box;}
 em {font-style:normal;}
 a {text-decoration:none;}
@@ -176,6 +177,11 @@ footer .eg:before {width:44px; height:15px; margin-right:10px; background-image:
 .share .twitter {background-image:url('../images/common/icon_twitter.png');}
 .share .zoom_in {background-image:url('../images/common/icon_zoomin.png');}
 .share .zoom_out {background-image:url('../images/common/icon_zoomout.png');}
+
+.satisfaction li {display:flex; align-items:center; justify-content:space-between;}
+.satisfaction dl {display:flex;}
+.satisfaction dt {padding-right:10px;}
+.satisfaction dd + dt {margin-left:20px;}
 
 @media (max-width:1199px){
   header h1 {text-align:center;}
