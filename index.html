@@ -13,29 +13,48 @@
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
     <link rel="stylesheet" type="text/css" href="./css/form.css" />
     <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css" />
-</head>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function(){
-        var title = document.querySelectorAll('h4');
+    <script type="text/javascript" async="" src="./js/swiper.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/swiper.css" />
 
-        title.forEach(function(o){
-            _btn = document.createElement('button');
-            _btn.innerHTML = 'View Source';
-            o.append(_btn);
-            o.querySelector('button').addEventListener('click', function(b){
-                if(!o.parentElement.querySelector('.code_box').classList.contains('active')){
-                    o.parentElement.querySelector('.code_box').classList.add('active');
-                    b.currentTarget.textContent = 'Hide Source';
-                } else {
-                    o.parentElement.querySelector('.code_box').classList.remove('active');
-                    b.currentTarget.textContent = 'View Source';
-                }
+    <script type="text/javascript" async="" src="./js/swiper_appy.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var title = document.querySelectorAll('h4');
+    
+            title.forEach(function(o){
+                _btn = document.createElement('button');
+                _btn.innerHTML = 'View Source';
+                o.append(_btn);
+                o.querySelector('button').addEventListener('click', function(b){
+                    if(!o.parentElement.querySelector('.code_box').classList.contains('active')){
+                        o.parentElement.querySelector('.code_box').classList.add('active');
+                        b.currentTarget.textContent = 'Hide Source';
+                    } else {
+                        o.parentElement.querySelector('.code_box').classList.remove('active');
+                        b.currentTarget.textContent = 'View Source';
+                    }
+                });
             });
         });
-    });
-</script>
 
+        /* swiper default / parallax change : 가이드에서 스와이프 확인용 */
+        function reset_swiper(e){
+            Swipers[e.getAttribute('swiper-index')].destroy();
+            $('.swiper-container').eq(e.getAttribute('swiper-index')).attr('class','swiper-container');
+            $('.swiper-container').eq(e.getAttribute('swiper-index')).find('.item, .item *').removeAttr('style');
+            $('.swiper-container').eq(e.getAttribute('swiper-index')).addClass(e.value);
+
+            if(e.value == 'parallax'){
+                Swipers[e.getAttribute('swiper-index')] = new Swiper($('.swiper-container').eq(e.getAttribute('swiper-index')),parallaxOptions);
+            } else {
+                Swipers[e.getAttribute('swiper-index')] = new Swiper($('.swiper-container').eq(e.getAttribute('swiper-index')),defaultOptions);
+            }
+        }
+        /* //swiper default / parallax change : 가이드에서 스와이프 확인용 */
+    </script>
+</head>
 <body>
 
     <div id="skip">
@@ -97,6 +116,87 @@
         <!-- //header -->
 
         <div id="container">
+            <section>
+                <h4>Swiper</h4>
+                <ul class="explain">
+                    <li>parallax효과 적용 시 [swiper-container]에 [parallax] 클래스 추가 :
+                        <label class="select_form">
+                            <select onchange="reset_swiper(this);" swiper-index="0">
+                                <option value="">default</option>
+                                <option value="parallax">parallax</option>
+                            </select>
+                        </label>
+                    </li>
+                </ul>
+                <div class="design_box">
+                    <div class="swiper-container">
+                        <!-- auto play -->
+                        <button class="autoplay">pause</button>
+                        <!-- //auto play -->
+                        <div class="swiper-wrapper">
+                            <!-- loop -->
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <span class="thumb"><img src="https://www.namwon.go.kr/upload_data/popup/info/169984997392490.png" alt="" /></span>
+                                    <p style="height:100%; color:#fff; font-size:40px; text-align:center; position:relative; z-index:1; display:flex; align-items:center; justify-content:center;" data-swiper-parallax="300">
+                                        Slide - Text01
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- //loop -->
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <span class="thumb"><img src="https://www.namwon.go.kr/upload_data/popup/info/169984997392490.png" alt="" /></span>
+                                    <p style="height:100%; color:#fff; font-size:40px; text-align:center; position:relative; z-index:1; display:flex; align-items:center; justify-content:center;" data-swiper-parallax="300">
+                                        Slide - Text01
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <span class="thumb"><img src="https://www.namwon.go.kr/upload_data/popup/info/169984997392490.png" alt="" /></span>
+                                    <p style="height:100%; color:#fff; font-size:40px; text-align:center; position:relative; z-index:1; display:flex; align-items:center; justify-content:center;" data-swiper-parallax="300">
+                                        Slide - Text01
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <span class="thumb"><img src="https://www.namwon.go.kr/upload_data/popup/info/169984997392490.png" alt="" /></span>
+                                    <p style="height:100%; color:#fff; font-size:40px; text-align:center; position:relative; z-index:1; display:flex; align-items:center; justify-content:center;" data-swiper-parallax="300">
+                                        Slide - Text01
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- swipper controls -->
+                        <div class="swiper-pagination-wrap"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <pre class="code_box"><code>&lt;div class="swiper-container"&gt;
+    &lt;div class="swiper-wrapper"&gt;
+        &lt;!-- loop --&gt;
+        &lt;div class="swiper-slide"&gt;
+            &lt;div class="item"&gt;
+                &lt;span class="thumb"&gt;&lt;img src="https://www.namwon.go.kr/upload_data/popup/info/169984997392490.png" alt="" /&gt;&lt;/span&gt;
+                &lt;p style="height:100%; color:#fff; font-size:40px; text-align:center; position:relative; z-index:1; display:flex; align-items:center; justify-content:center;" data-swiper-parallax="300"&gt;
+                    Slide - Text01
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- //loop --&gt;
+    &lt;/div&gt;
+
+    &lt;!-- swipper controls --&gt;
+    &lt;div class="swiper-pagination-wrap"&gt;&lt;/div&gt;
+    &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
+    &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
             <section>
                 <h4>Zoom & Share</h4>
                 <div class="design_box">
@@ -323,6 +423,12 @@
                                     <option>Option01</option>
                                     <option>Option02</option>
                                     <option>Option03</option>
+                                    <optgroup label="====== option group ======">
+                                        <option>Option Group01-1</option>
+                                        <option>Option Group01-2</option>
+                                        <option>Option Group01-3</option>
+                                        <option>Option Group01-4</option>
+                                    </optgroup>
                                 </select>
                             </label>
                             <div class="label_wrap">

@@ -7,6 +7,13 @@ h4:before {height:15px; border-left:3px solid #ff7200; content:''; position:abso
 
 h4 button {padding:5px 10px; color:#fff; font-size:14px; background-color:#df262b; border:0; border-radius:50px;}
 
+.explain {margin-top:10px; margin-bottom:10px;}
+.explain li {padding-left:10px; position:relative;}
+.explain li + li {margin-top:5px;}
+.explain li:before {width:3px; height:3px; background-color:#666; content:''; position:absolute; top:10px; left:0; display:inline-block;}
+.explain .explain li:before {height:1px;}
+.explain li em {font-size:12px;}
+
 .design_box {margin-top:10px; padding:10px; border:1px solid #ddd; position:relative;}
 .code_box {margin-top:20px; padding:20px; background-color:#000; border-radius:4px; overflow:auto; display:none;}
 .code_box.active {display:block;}
