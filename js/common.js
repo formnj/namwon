@@ -179,9 +179,10 @@ function input_btn_chk(e){ // 버튼보이기
     }    
 }//function input_btn_chk()
 function input_btn_fn(e){ // del 클릭시, input 내용 삭제
-    var input = e.closest('.label_wrap').querySelector('input')
-    input.value = null
-    e.style.display="none"
+    var input = e.closest('.label_wrap').querySelector('input');
+    input.value = null;
+    e.style.display="none";
+    e.parentNode.querySelector('i').style.display="block";
 }//function input_btn_fn()
 function input_btn_chg(){
     var icon_pss = document.querySelector('button.icon_pss')
