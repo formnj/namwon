@@ -1,0 +1,137 @@
+<div class="top">
+    <h1><a href="./"><img src="./images/common/logo_header.png" alt="춘향남원 사항의 1번지" /></a></h1>
+    <button class="hamber_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+<div class="gnb">
+    <nav>
+        <ul>
+            <li><a href="#none">Elements</a>
+                <ul>
+                    <li><a href="#none">Menu01-1</a></li>
+                    <li><a href="#none">Menu01-2</a>
+                        <ul>
+                            <li><a href="#none">Menu01-2-1</a></li>
+                            <li><a href="#none">Menu01-2-2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#none">Menu01-3</a></li>
+                    <li><a href="#none">Menu01-4</a>
+                        <ul>
+                            <li><a href="#none">Menu01-4-1</a></li>
+                            <li><a href="#none">Menu01-4-2</a></li>
+                            <li><a href="#none">Menu01-4-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="./layout.html">Layout</a></li>
+            <li><a href="#none">Menu03</a>
+                <ul>
+                    <li><a href="#none">Menu03-1</a></li>
+                    <li><a href="#none">Menu03-2</a>
+                        <ul>
+                            <li><a href="#none">Menu03-2-1</a></li>
+                            <li><a href="#none">Menu03-2-2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#none">Menu01-3</a></li>
+                    <li><a href="#none">Menu01-4</a></li>
+                </ul>
+            </li>
+            <li><a href="#none">Menu04</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+$('document').ready(function(){
+    var _width = $(window).width();
+    if(_width > 1199){
+        /* navi */
+        $('nav li').bind('mouseenter focusin', function(){
+            $(this).children('ul').stop().slideDown(function(){
+                $(this).attr('style','display:block;');
+            });
+        });
+
+        $('nav li').bind('mouseleave focusout', function(){
+            $(this).children('ul').stop().slideUp(function(){
+                $(this).removeAttr('style');
+            });
+        });
+        /* //navi */
+    } else {
+        /* navi */
+        $('nav li > a').each(function(){
+            if($(this).siblings('ul').length > 0){
+                $(this).click(function(e){
+                    e.preventDefault();
+                    $(this).parent().siblings().children('ul').stop().slideUp(function(){
+                        $(this).removeAttr('style');
+                    });
+                    $(this).siblings('ul').stop().slideDown(function(){
+                        $(this).attr('style','display:block;');
+                    });
+                });
+            }
+        });
+        /* //navi */
+    }
+
+    /* all menu */
+    $('.hamber_btn').click(function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $('header .gnb').removeClass('active');
+            $('nav ul').removeAttr('style');
+            scroll_callback.clear();
+        } else {
+            $(this).addClass('active');
+            $('header .gnb').addClass('active');
+            scroll_callback.fixed();
+        }
+    });
+    /* //all menu */
+});
+
+$(window).resize(function(){
+    var _width = $(window).width();
+    $('nav li').unbind();
+    $('nav ul').removeAttr('style');
+    $('header .gnb').removeClass('active');
+
+    $('.hamber_btn span').removeClass('on');
+
+    if(_width > 1199){
+        $('nav li').bind('mouseenter focusin', function(){
+            $(this).children('ul').stop().slideDown(function(){
+                $(this).attr('style','display:block;');
+            });
+        });
+    
+        $('nav li').bind('mouseleave focusout', function(){
+            $(this).children('ul').stop().slideUp(function(){
+                $(this).removeAttr('style');
+            });
+        });
+    } else {
+        $('nav li > a').each(function(){
+            if($(this).siblings('ul').length > 0){
+                $(this).click(function(e){
+                    e.preventDefault();
+                    $(this).parent().siblings().children('ul').stop().slideUp(function(){
+                        $(this).removeAttr('style');
+                    });
+                    $(this).siblings('ul').stop().slideDown(function(){
+                        $(this).attr('style','display:block;');
+                    });
+                });
+            }
+        });
+    }
+});
+</script>

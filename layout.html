@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="skip">
+        <a href="#container">본문 바로가기</a>
+    </div>
+
+    <div id="wrap">
+        <!-- header -->
+        <header></header>
+        <!-- //header -->
+
+        <div id="container">
+            <div class="content sub">
+                <!-- LNB -->
+                <div class="lnb">
+                    <h2>1Depth</h2>
+                    <dl>
+                        <dt><a href="#none">2Depth</a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#none">3Depth</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- //LNB -->
+
+                <div class="cont_right">
+                    <!-- breadcrumb -->
+                    <ul class="breadcrumb">
+                        <li><span>홈</span></li>
+                        <li>
+                            <dl>
+                                <dt><button>1Depth</button></dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="#none">1Depth-1</a></li>
+                                        <li><a href="#none">1Depth-2</a></li>
+                                        <li><a href="#none">1Depth-3</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><button>2Depth</button></dt>
+                                <dd>
+                                    <ul>
+                                        <li><a href="#none">2Depth-1</a></li>
+                                        <li><a href="#none">2Depth-2</a></li>
+                                        <li><a href="#none">2Depth-3</a></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li><span>3Depth</span></li>
+                        <li><span>4Depth</span></li>
+                        <li><span>5Depth</span></li>
+                    </ul>
+                    <!-- //breadcrumb -->
+
+                    <div class="title_wrap">
+                        <h2>Title</h2>
+                        <ul class="share">
+                            <li><button class="facebook">facebook</button></li>
+                            <li><button class="twitter">twitter</button></li>
+                            <li><button class="zoom_in">+</button></li>
+                            <li><button class="zoom_out">-</button></li>
+                        </ul>
+                    </div>
+
+                    <section>==================================================================<br/>Content<br/>==================================================================</section>
+
+                    <!-- 만족도 조사 -->
+                    <div class="satisfaction">
+                        <ul>
+                            <li>
+                                <div class="check_group">
+                                    <label class="check">
+                                        <input type="radio" name="group" />
+                                        <em class="label">매우만족</em>
+                                    </label>
+                                    <label class="check">
+                                        <input type="radio" name="group" />
+                                        <em class="label">만족</em>
+                                    </label>
+                                    <label class="check">
+                                        <input type="radio" name="group" />
+                                        <em class="label">보통</em>
+                                    </label>
+                                    <label class="check">
+                                        <input type="radio" name="group" />
+                                        <em class="label">불만족</em>
+                                    </label>
+                                    <label class="check">
+                                        <input type="radio" name="group" />
+                                        <em class="label">매우불만족</em>
+                                    </label>
+                                </div>
+                    
+                                <button class="btn_mid btn_ok"><em>등록하기</em></button>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>담당부서</dt>
+                                    <dd>홍보전산과/김창호</dd>
+                                    <dt>연락처</dt>
+                                    <dd><a href="tel:063-620-6058">063-620-6058</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //만족도 조사 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer></footer>
+        <!-- //footer -->
+    </div>
+
+    <script type="text/javascript" async="" src="./js/jquery.js"></script>
+    <script type="text/javascript" async="" src="./js/jquery-ui.js"></script>
+    <script type="text/javascript" async="" src="./js/common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/guide.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/form.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css" />
+
+    <script type="text/javascript" async="" src="./js/swiper.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/swiper.css" />
+
+    <script type="text/javascript" async="" src="./js/swiper_appy.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var title = document.querySelectorAll('h4');
+    
+            title.forEach(function(o){
+                _btn = document.createElement('button');
+                _btn.innerHTML = 'View Source';
+                o.append(_btn);
+                o.querySelector('button').addEventListener('click', function(b){
+                    if(!o.parentElement.querySelector('.code_box').classList.contains('active')){
+                        o.parentElement.querySelector('.code_box').classList.add('active');
+                        b.currentTarget.textContent = 'Hide Source';
+                    } else {
+                        o.parentElement.querySelector('.code_box').classList.remove('active');
+                        b.currentTarget.textContent = 'View Source';
+                    }
+                });
+            });
+        });
+
+        /* swiper default / parallax change : 가이드에서 스와이프 확인용 */
+        function reset_swiper(e){
+            Swipers[e.getAttribute('swiper-index')].destroy();
+            $('.swiper-container').eq(e.getAttribute('swiper-index')).attr('class','swiper-container');
+            $('.swiper-container').eq(e.getAttribute('swiper-index')).find('.item, .item *').removeAttr('style');
+            $('.swiper-container').eq(e.getAttribute('swiper-index')).addClass(e.value);
+
+            if(e.value == 'parallax'){
+                Swipers[e.getAttribute('swiper-index')] = new Swiper($('.swiper-container').eq(e.getAttribute('swiper-index')),parallaxOptions);
+            } else {
+                Swipers[e.getAttribute('swiper-index')] = new Swiper($('.swiper-container').eq(e.getAttribute('swiper-index')),defaultOptions);
+            }
+        }
+        /* //swiper default / parallax change : 가이드에서 스와이프 확인용 */
+    </script>
+    
+</body>
+</html>
