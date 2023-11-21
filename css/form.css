@@ -1,5 +1,7 @@
 input[type="text"], input[type="email"], input[type="number"], input[type="tel"], input[type="password"], input[type="url"], input[type="search"], input[type="file"], textarea {height:42px; padding:0 15px; background-color:#fff; border:1px solid #e8e5e2; border-radius:0; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none;}
 
+select {border:0; border-radius:0; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
+
 label.input, label.select {position:relative; display:block; flex:1;}
 label.input i {color:#aaa; font-size:16px; font-style:normal; line-height:18px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; position:absolute; top:11px; right:0; left:15px;}/* placeholder */
 label.input input[type='text'], label.input input[type='password'], label.input input[type='number'] {width:100%; font-size:16px; font-family:'MyLotte'; line-height:18px;}
