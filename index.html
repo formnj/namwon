@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script type="text/javascript" async="" src="./js/jquery.js"></script>
+    <!-- <script type="text/javascript" async="" src="./js/jquery.js"></script>
     <script type="text/javascript" async="" src="./js/jquery-ui.js"></script>
     <script type="text/javascript" async="" src="./js/common.js"></script>
 
@@ -17,9 +17,9 @@
     <script type="text/javascript" async="" src="./js/swiper.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/swiper.css" />
 
-    <script type="text/javascript" async="" src="./js/swiper_appy.js"></script>
+    <script type="text/javascript" async="" src="./js/swiper_appy.js"></script> -->
 
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function(){
             var title = document.querySelectorAll('h4');
     
@@ -53,7 +53,7 @@
             }
         }
         /* //swiper default / parallax change : 가이드에서 스와이프 확인용 */
-    </script>
+    </script> -->
 </head>
 <body>
 
@@ -709,6 +709,56 @@
         </footer>
         <!-- //footer -->
     </div>
+
+    <script type="text/javascript" async="" src="./js/jquery.js"></script>
+    <script type="text/javascript" async="" src="./js/jquery-ui.js"></script>
+    <script type="text/javascript" async="" src="./js/common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/guide.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/form.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css" />
+
+    <script type="text/javascript" async="" src="./js/swiper.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/swiper.css" />
+
+    <script type="text/javascript" async="" src="./js/swiper_appy.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var title = document.querySelectorAll('h4');
+    
+            title.forEach(function(o){
+                _btn = document.createElement('button');
+                _btn.innerHTML = 'View Source';
+                o.append(_btn);
+                o.querySelector('button').addEventListener('click', function(b){
+                    if(!o.parentElement.querySelector('.code_box').classList.contains('active')){
+                        o.parentElement.querySelector('.code_box').classList.add('active');
+                        b.currentTarget.textContent = 'Hide Source';
+                    } else {
+                        o.parentElement.querySelector('.code_box').classList.remove('active');
+                        b.currentTarget.textContent = 'View Source';
+                    }
+                });
+            });
+        });
+
+        /* swiper default / parallax change : 가이드에서 스와이프 확인용 */
+        function reset_swiper(e){
+            Swipers[e.getAttribute('swiper-index')].destroy();
+            $('.swiper-container').eq(e.getAttribute('swiper-index')).attr('class','swiper-container');
+            $('.swiper-container').eq(e.getAttribute('swiper-index')).find('.item, .item *').removeAttr('style');
+            $('.swiper-container').eq(e.getAttribute('swiper-index')).addClass(e.value);
+
+            if(e.value == 'parallax'){
+                Swipers[e.getAttribute('swiper-index')] = new Swiper($('.swiper-container').eq(e.getAttribute('swiper-index')),parallaxOptions);
+            } else {
+                Swipers[e.getAttribute('swiper-index')] = new Swiper($('.swiper-container').eq(e.getAttribute('swiper-index')),defaultOptions);
+            }
+        }
+        /* //swiper default / parallax change : 가이드에서 스와이프 확인용 */
+    </script>
     
 </body>
 </html>
