@@ -1,6 +1,6 @@
 input[type="text"], input[type="email"], input[type="number"], input[type="tel"], input[type="password"], input[type="url"], input[type="search"], input[type="file"], textarea {height:42px; padding:0 15px; background-color:#fff; border:1px solid #e8e5e2; border-radius:0; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none;}
 
-select {border:0; border-radius:0; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
+select {background-color:#fff; border:0; border-radius:0; -webkit-appearance:none; -moz-appearance:none; appearance:none;}
 
 label.input, label.select {position:relative; display:block; flex:1;}
 label.input i {color:#aaa; font-size:16px; font-style:normal; line-height:18px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; position:absolute; top:11px; right:0; left:15px;}/* placeholder */
@@ -46,7 +46,7 @@ label.input button.icon_pss {background-image:url('../images/common/icon_pass_hi
 .check_ani em:before {width:42px; height:22px; background-color:#ccc; border:0; border-radius:60px; content:''; position:absolute; top:0; left:0; display:inline-block;}
 .check_ani input[type='checkbox']:checked + em:after {left:22px;}
 
-.select_form select{height:42px; border:1px solid #e8e5e2;}
+.select_form select{height:42px; padding:0 20px 0 10px; border:1px solid #e8e5e2;}
 
 .form_group > li + li {padding-top:20px;}
 .form_group .form_tit {margin-top:0; margin-bottom:6px; font-size:14px !important; font-family:'Noto Sans'; line-height:20px !important; text-align:left !important;}
