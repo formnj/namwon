@@ -154,3 +154,15 @@ function placeholder(_target){
         }
     });
 }
+
+/* go_top */
+function go_top(_target){
+    let top_btn = document.querySelector(_target)
+    var show_pos = 300;
+    window.addEventListener('scroll', function(){
+        (this.scrollY > show_pos) ? top_btn.classList.add('show') : top_btn.classList.remove('show')
+    })
+    top_btn.addEventListener('click',function(){
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    })
+}

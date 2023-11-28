@@ -26,3 +26,15 @@
     <a href="javascript:void(0);" class="top_btn">TOP</a>
     <!-- //top button -->
 </div>
+
+<script>
+    go_top('.top_btn');
+
+    window.addEventListener('scroll', function(){
+        if(this.scrollY > 10){
+            document.querySelector('.top_btn').style.display="block";
+        } else {
+            document.querySelector('.top_btn').style.display="none";
+        }
+    });
+</script>
