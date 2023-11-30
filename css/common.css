@@ -37,16 +37,16 @@ header nav ul ul {display:none;}
 /* footer */
 footer {padding-top:35px; border-top:1px solid #dfdfdf;}
 footer .inner {max-width:1200px; margin:0 auto; padding:0 20px; display:flex;}
-footer .inner:after {clear:both; content:''; display:block;}
+footer .inner:after {content:''; clear:both; display:block;}
 footer .authentication {display:flex;}
 footer .authentication li + li {margin-left:10px;}
 footer .authentication img {height:48px;}
 footer .inner > div {margin:0 32px; flex:1;}
 footer .inner > div ul {display:flex;}
-footer address > * + *:before, footer .inner > div li + li:before {height:10px; margin-top:-2px; margin-left:8px; padding-left:8px; border-left:1px solid #222; vertical-align:middle; content:''; display:inline-block;}
+footer address > * + *:before, footer .inner > div li + li:before {content:''; height:10px; margin-top:-2px; margin-left:8px; padding-left:8px; border-left:1px solid #222; vertical-align:middle; display:inline-block;}
 footer address {margin-bottom:5px; font-style:normal; display:flex;}
 footer .eg {margin:10px 0;}
-footer .eg:before {width:44px; height:15px; margin-right:10px; background-image:url('../images/common/eg_logo.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; content:''; display:inline-block;}
+footer .eg:before {content:''; width:44px; height:15px; margin-right:10px; background-image:url('../images/common/eg_logo.png'); background-position:50%; background-repeat:no-repeat; background-size:cover; display:inline-block;}
 
 .content.sub {max-width:1200px; margin:0 auto -50px; display:flex;}
 .content.sub .lnb {width:230px; border-right:1px solid #dfdfdf;}
@@ -69,18 +69,16 @@ footer .eg:before {width:44px; height:15px; margin-right:10px; background-image:
 
 /* board top */
 .board_info_wrap {margin-bottom:20px;}
-.board_info_wrap:after {clear:both; content:''; display:block;}
+.board_info_wrap:after {content:''; clear:both; display:block;}
 .board_info_wrap .result_count {margin-top:10px; float:left;}
 .board_info_wrap .search_wrap {float:right;}
 
 /* search */
 .search_wrap {position:relative; display:flex; align-items:center;}
-.search_wrap .label_wrap + .label_wrap {margin-top:0;}
-.search_wrap .select_form + .label_wrap {margin-left:5px;}
 .search_wrap input[type='text'] {height:42px; vertical-align:middle;}
 .search_wrap .btn_search {width:40px; font-size:0; background-color:#ff7200; position:relative;}
-.search_wrap .btn_search:before {width:12px; height:12px; margin-top:-2px; margin-left:-2px; border:2px solid #fff; border-radius:50%; content:''; position:absolute; top:50%; left:50%; display:inline-block; transform:translate(-50%, -50%);}
-.search_wrap .btn_search:after {height:8px; margin-top:4px; margin-left:8px; border-left:2px solid #fff; content:''; position:absolute; top:50%; left:50%; display:inline-block; transform:rotate(-45deg) translate(-50%, -50%);}
+.search_wrap .btn_search:before {content:''; width:12px; height:12px; margin-top:-2px; margin-left:-2px; border:2px solid #fff; border-radius:50%; position:absolute; top:50%; left:50%; display:inline-block; transform:translate(-50%, -50%);}
+.search_wrap .btn_search:after {content:''; height:8px; margin-top:4px; margin-left:8px; border-left:2px solid #fff; position:absolute; top:50%; left:50%; display:inline-block; transform:rotate(-45deg) translate(-50%, -50%);}
 
 .search_wrap > dd {margin-left:20px; flex:1; display:flex; align-items:center;}
 .search_wrap > dd + dt {margin-left:20px;}
@@ -102,7 +100,7 @@ footer .eg:before {width:44px; height:15px; margin-right:10px; background-image:
 .toast.auto {padding:0 40px;}
 .toast.active {bottom:100px; opacity:1;}
 .toast .btn_close {width:20px; height:20px; font-size:0; position:absolute; top:50%; right:20px; display:inline-block; transform:translateY(-50%);}
-.toast .btn_close:before, .toast .btn_close:after {width:15px; border-top:1px solid #333; content:''; position:absolute; top:50%; right:0; display:inline-block;}
+.toast .btn_close:before, .toast .btn_close:after {content:''; width:15px; border-top:1px solid #333; position:absolute; top:50%; right:0; display:inline-block;}
 .toast .btn_close:before {transform:rotate(45deg);}
 .toast .btn_close:after {transform:rotate(-45deg);}
 
@@ -111,7 +109,7 @@ footer .eg:before {width:44px; height:15px; margin-right:10px; background-image:
 .modal_wrap .modal_inner {padding:20px; background-color:#fff; position:relative;}
 .modal_wrap[data-modal*='-dim'] {background-color:rgba(0,0,0,.6); position:fixed; top:0; right:0; bottom:0; left:0; z-index:100;}
 .modal_wrap .btn_close {width:25px; height:25px; font-size:0; position:absolute; top:20px; right:20px; z-index:1; display:inline-block;}
-.modal_wrap .btn_close:before, .modal_wrap .btn_close:after {width:30px; border-top:1px solid #333; content:''; position:absolute; top:50%; right:-4px; display:inline-block;}
+.modal_wrap .btn_close:before, .modal_wrap .btn_close:after {content:''; width:30px; border-top:1px solid #333; position:absolute; top:50%; right:-4px; display:inline-block;}
 .modal_wrap .btn_close:before {transform:rotate(45deg);}
 .modal_wrap .btn_close:after {transform:rotate(-45deg);}
 
@@ -140,15 +138,15 @@ footer .eg:before {width:44px; height:15px; margin-right:10px; background-image:
 /* paging */
 .paging {margin-top:50px; text-align:center;}
 .paging > div {display:inline-block;}
-.paging > div:after {clear:both; content:''; display:block;}
+.paging > div:after {content:''; clear:both; display:block;}
 .paging > div > * {width:40px; height:40px; margin:0 2px; color:#555; font-size:14px; line-height:38px; border:1px solid #e8e5e2; vertical-align:middle; float:left; position:relative; display:inline-block; transition:all 0.35s;}
 .paging > div > *:hover {color:#fff; background-color:#666; border-color:#666;}
 .paging > div strong {color:#fff; background-color:#666; border-color:#666;}
 .paging .first, .paging .prev, .paging .next, .paging .last {font-size:0;}
-.paging .first:before, .paging .prev:before, .paging .next:before, .paging .last:before {width:8px; height:8px; border-top:1px solid #666; border-right:1px solid #666; vertical-align:middle; content:''; display:inline-block;}
+.paging .first:before, .paging .prev:before, .paging .next:before, .paging .last:before {content:''; width:8px; height:8px; border-top:1px solid #666; border-right:1px solid #666; vertical-align:middle; display:inline-block;}
 .paging .first:hover:before, .paging .prev:hover:before, .paging .next:hover:before, .paging .last:hover:before, .paging .first:hover:after, .paging .last:hover:after {border-color:#fff;}
-.paging .first:after, .paging .last:after {width:8px; height:8px; border-top:1px solid #666; border-right:1px solid #666; vertical-align:middle; content:''; display:inline-block;}
-.paging .first:before, .paging .first:after, .paging .prev:before {margin-right:-3px; transform:rotate(-135deg);}
+.paging .first:after, .paging .last:after {width:8px; height:8px; border-top:1px solid #666; border-right:1px solid #666; vertical-align:middle; display:inline-block;}
+.paging .first:before, .paging .first:after, .paging .prev:before {content:''; margin-right:-3px; transform:rotate(-135deg);}
 .paging .next:before, .paging .last:before, .paging .last:after {margin-left:-3px; transform:rotate(45deg);}
 .paging .prev {margin-right:16px;}
 .paging .next {margin-left:16px;}

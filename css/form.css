@@ -45,9 +45,9 @@ label.input button.icon_pss {background-image:url('../images/common/icon_pass_hi
 .check_ani {position:relative; display:inline-block;}
 .check_ani input {width:42px; height:22px; margin:0 0 0 1px; position:absolute;}
 .check_ani em {min-height:22px; padding-left:48px; position:relative; display:block;}
-.check_ani input[type='checkbox'] + em:after {width:18px; height:18px; background-color:#fff; border-radius:50%; content:''; position:absolute; top:50%; left:2px; z-index:1; display:block; transform:translateY(-50%); transition:all 0.2s;}
+.check_ani input[type='checkbox'] + em:after {content:''; width:18px; height:18px; background-color:#fff; border-radius:50%; position:absolute; top:50%; left:2px; z-index:1; display:block; transform:translateY(-50%); transition:all 0.2s;}
 .check_ani input[type='checkbox']:checked + em:before {background-color:#ff7200;}
-.check_ani em:before {width:42px; height:22px; background-color:#ccc; border:0; border-radius:60px; content:''; position:absolute; top:0; left:0; display:inline-block;}
+.check_ani em:before {content:''; width:42px; height:22px; background-color:#ccc; border:0; border-radius:60px; position:absolute; top:0; left:0; display:inline-block;}
 .check_ani input[type='checkbox']:checked + em:after {left:22px;}
 
 .form_group > li + li {padding-top:20px;}
