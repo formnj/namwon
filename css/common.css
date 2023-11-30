@@ -84,7 +84,7 @@ footer .eg:before {width:44px; height:15px; margin-right:10px; background-image:
 
 .search_wrap > dd {margin-left:20px; flex:1; display:flex; align-items:center;}
 .search_wrap > dd + dt {margin-left:20px;}
-.search_wrap .btnSection {margin-top:0; margin-left:10px; flex:0 auto; display:flex; gap:10px;}
+.search_wrap .btnSection {margin-top:0; flex:0 auto; display:flex; gap:10px;}
 
 /* accodian_toggle */
 .board_type_toggle {border-top:1px solid #333; border-bottom:1px solid #333;}

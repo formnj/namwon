@@ -72,7 +72,7 @@
                     <h4>Swiper</h4>
                     <ul class="explain">
                         <li>parallax효과 적용 시 [swiper-container]에 [parallax] 클래스 추가 :
-                            <label class="select_form">
+                            <label class="select">
                                 <select onchange="reset_swiper(this);" swiper-index="0">
                                     <option value="">default</option>
                                     <option value="parallax">parallax</option>
@@ -412,8 +412,8 @@
                     <div class="design_box">
                         <dl class="search_wrap">
                             <dt>검색어</dt>
-                            <dd>
-                                <label class="select_form">
+                            <dd class="multi_form">
+                                <label class="select">
                                     <select>
                                         <optgroup label="Option01">
                                             <option>Option Group01-1</option>
@@ -430,28 +430,22 @@
                                         </optgroup>
                                     </select>
                                 </label>
-                                <div class="label_wrap">
-                                    <label class="input">
-                                        <i>Placeholder</i>
-                                        <input type="text" onkeyup="input_btn_chk(this);">
-                                        <em>error message</em>
-                                        <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
-                                    </label>
-                                </div>
+                                <label class="input">
+                                    <i>Placeholder</i>
+                                    <input type="text" onkeyup="input_btn_chk(this);">
+                                    <em>error message</em>
+                                    <button class="icon_del" type="button" onclick="input_btn_fn(this)">delete</button> 
+                                </label>
                             </dd>
                             <dt>날짜</dt>
-                            <dd>
-                                <div class="label_wrap">
-                                    <label class="input">
-                                        <i>Placeholder</i>
-                                        <input type="text" class="datepicker" readonly />
-                                    </label>
-                                </div> ~ <div class="label_wrap">
-                                    <label class="input">
-                                        <i>Placeholder</i>
-                                        <input type="text" class="datepicker" readonly />
-                                    </label>
-                                </div>
+                            <dd class="multi_form">
+                                <label class="input">
+                                    <i>Placeholder</i>
+                                    <input type="text" class="datepicker" readonly />
+                                </label>~<label class="input">
+                                    <i>Placeholder</i>
+                                    <input type="text" class="datepicker" readonly />
+                                </label>
 
                                 <div class="btnSection">
                                     <button class="btn_mid btn_ok"><em>검색</em></button>
@@ -462,37 +456,40 @@
                     </div>
                     <pre class="code_box"><code>&lt;dl class="search_wrap"&gt;
     &lt;dt&gt;검색어&lt;/dt&gt;
-    &lt;dd&gt;
-        &lt;label class="select_form"&gt;
+    &lt;dd class="multi_form"&gt;
+        &lt;label class="select"&gt;
             &lt;select&gt;
-                &lt;option&gt;Option01&lt;/option&gt;
-                &lt;option&gt;Option01&lt;/option&gt;
+                &lt;optgroup label="Option01"&gt;
+                    &lt;option&gt;Option Group01-1&lt;/option&gt;
+                    &lt;option&gt;Option Group01-2&lt;/option&gt;
+                    &lt;option&gt;Option Group01-3&lt;/option&gt;
+                    &lt;option&gt;Option Group01-4&lt;/option&gt;
+                &lt;/optgroup&gt;
                 &lt;option&gt;Option02&lt;/option&gt;
-                &lt;option&gt;Option03&lt;/option&gt;
+                &lt;optgroup label="Option03"&gt;
+                    &lt;option&gt;Option Group03-1&lt;/option&gt;
+                    &lt;option&gt;Option Group03-2&lt;/option&gt;
+                    &lt;option&gt;Option Group03-3&lt;/option&gt;
+                    &lt;option&gt;Option Group03-4&lt;/option&gt;
+                &lt;/optgroup&gt;
             &lt;/select&gt;
         &lt;/label&gt;
-        &lt;div class="label_wrap"&gt;
-            &lt;label class="input"&gt;
-                &lt;i&gt;Placeholder&lt;/i&gt;
-                &lt;input type="text" onkeyup="input_btn_chk(this);"&gt;
-                &lt;em&gt;error message&lt;/em&gt;
-                &lt;button class="icon_del" type="button" onclick="input_btn_fn(this)"&gt;delete&lt;/button&gt; 
-            &lt;/label&gt;
-        &lt;/div&gt;
+        &lt;label class="input"&gt;
+            &lt;i&gt;Placeholder&lt;/i&gt;
+            &lt;input type="text" onkeyup="input_btn_chk(this);"&gt;
+            &lt;em&gt;error message&lt;/em&gt;
+            &lt;button class="icon_del" type="button" onclick="input_btn_fn(this)"&gt;delete&lt;/button&gt; 
+        &lt;/label&gt;
     &lt;/dd&gt;
     &lt;dt&gt;날짜&lt;/dt&gt;
-    &lt;dd&gt;
-        &lt;div class="label_wrap"&gt;
-            &lt;label class="input"&gt;
-                &lt;i&gt;Placeholder&lt;/i&gt;
-                &lt;input type="text" class="datepicker" /&gt;
-            &lt;/label&gt;
-        &lt;/div&gt; ~ &lt;div class="label_wrap"&gt;
-            &lt;label class="input"&gt;
-                &lt;i&gt;Placeholder&lt;/i&gt;
-                &lt;input type="text" class="datepicker" /&gt;
-            &lt;/label&gt;
-        &lt;/div&gt;
+    &lt;dd class="multi_form"&gt;
+        &lt;label class="input"&gt;
+            &lt;i&gt;Placeholder&lt;/i&gt;
+            &lt;input type="text" class="datepicker" readonly /&gt;
+        &lt;/label&gt;~&lt;label class="input"&gt;
+            &lt;i&gt;Placeholder&lt;/i&gt;
+            &lt;input type="text" class="datepicker" readonly /&gt;
+        &lt;/label&gt;
 
         &lt;div class="btnSection"&gt;
             &lt;button class="btn_mid btn_ok"&gt;&lt;em&gt;검색&lt;/em&gt;&lt;/button&gt;
@@ -507,50 +504,52 @@
                     <div class="design_box">
                         <div class="board_info_wrap">
                             <p class="result_count">총<strong>999</strong>건의 게시물이 있습니다.</p>
-                            <div class="search_wrap">
-                                목록
-                                <!-- select -->
-                                <label class="select_form">
-                                    <select>
-                                        <option>5</option>
-                                        <option>10</option>
-                                        <option>15</option>
-                                        <option>20</option>
-                                        <option>25</option>
-                                        <option>30</option>
-                                    </select>
-                                </label>
-                                <!-- //select -->
-                                개씩
-                                <div class="btnSection">
-                                    <button class="btn_mid btn_ok"><em>보기</em></button>
-                                </div>
-                            </div>
+                            <dl class="search_wrap">
+                                <dt>목록</dt>
+                                <dd class="multi_form">
+                                    <!-- select -->
+                                    <label class="select">
+                                        <select>
+                                            <option>5</option>
+                                            <option>10</option>
+                                            <option>15</option>
+                                            <option>20</option>
+                                            <option>25</option>
+                                            <option>30</option>
+                                        </select>
+                                    </label>
+                                    <!-- //select -->
+                                    개씩
+                                    <div class="btnSection">
+                                        <button class="btn_mid btn_ok"><em>보기</em></button>
+                                    </div>
+                                </dd>
+                            </dl>
                         </div>
                     </div>
                     <pre class="code_box"><code>&lt;div class="board_info_wrap"&gt;
     &lt;p class="result_count"&gt;총&lt;strong&gt;999&lt;/strong&gt;건의 게시물이 있습니다.&lt;/p&gt;
-    &lt;div class="search_wrap"&gt;
-        &lt;!-- select --&gt;
-        &lt;label class="select_form"&gt;
-            &lt;select&gt;
-                &lt;option&gt;Option01&lt;/option&gt;
-                &lt;option&gt;Option01&lt;/option&gt;
-                &lt;option&gt;Option02&lt;/option&gt;
-                &lt;option&gt;Option03&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/label&gt;
-        &lt;!-- //select --&gt;
-        &lt;div class="label_wrap"&gt;
-            &lt;label class="input"&gt;
-                &lt;i style="display: none;"&gt;Placeholder&lt;/i&gt;
-                &lt;input class="password" type="text" onkeyup="input_btn_chk(this);"&gt;
-                &lt;em&gt;error message&lt;/em&gt;
-                &lt;button class="icon_del" type="button" onclick="input_btn_fn(this)"&gt;delete&lt;/button&gt;
+    &lt;dl class="search_wrap"&gt;
+        &lt;dt&gt;목록&lt;/dt&gt;
+        &lt;dd class="multi_form"&gt;
+            &lt;!-- select --&gt;
+            &lt;label class="select"&gt;
+                &lt;select&gt;
+                    &lt;option&gt;5&lt;/option&gt;
+                    &lt;option&gt;10&lt;/option&gt;
+                    &lt;option&gt;15&lt;/option&gt;
+                    &lt;option&gt;20&lt;/option&gt;
+                    &lt;option&gt;25&lt;/option&gt;
+                    &lt;option&gt;30&lt;/option&gt;
+                &lt;/select&gt;
             &lt;/label&gt;
-            &lt;button class="btn_search"&gt;&lt;em&gt;검색&lt;/em&gt;&lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+            &lt;!-- //select --&gt;
+            개씩
+            &lt;div class="btnSection"&gt;
+                &lt;button class="btn_mid btn_ok"&gt;&lt;em&gt;보기&lt;/em&gt;&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/dd&gt;
+    &lt;/dl&gt;
 &lt;/div&gt;</code></pre>
                 </section>
 

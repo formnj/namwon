@@ -2,6 +2,9 @@ input[type="text"], input[type="email"], input[type="number"], input[type="tel"]
 
 select {background-color:#fff; border:0; border-radius:0;}
 
+.multi_form {display:flex; flex-wrap:wrap; align-items:center; gap:8px;}
+.multi_form label {flex:1;}
+
 label.input, label.select {position:relative; display:block; flex:1;}
 label.input i {color:#aaa; font-size:16px; font-style:normal; line-height:18px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; position:absolute; top:11px; right:0; left:15px;}/* placeholder */
 label.input input[type='text'], label.input input[type='password'], label.input input[type='number'] {width:100%; font-size:16px; font-family:'MyLotte'; line-height:18px;}
@@ -15,10 +18,11 @@ label.input button.icon_del {background:url('../images/common/icon_search_del.pn
 label.input button.icon_pss.active, label.input  button.icon_pss {background-size:cover;}
 label.input button.icon_pss.active {background-image:url('../images/common/icon_pass_view.png');}
 label.input button.icon_pss {background-image:url('../images/common/icon_pass_hide.png'); border:0;}
+.select select{width:100%; height:42px; padding:0 20px 0 10px; border:1px solid #e8e5e2;}
 
 .label_wrap {position:relative; flex:1; display:flex; gap:10px;}
 
-.label_wrap + .label_wrap {margin-top:10px;}
+.label_wrap label + label {margin-top:10px;}
 
 .check_group {margin-top:-20px; margin-left:-20px;}
 .check_group .check {margin-top:20px; margin-left:20px;}
@@ -45,8 +49,6 @@ label.input button.icon_pss {background-image:url('../images/common/icon_pass_hi
 .check_ani input[type='checkbox']:checked + em:before {background-color:#ff7200;}
 .check_ani em:before {width:42px; height:22px; background-color:#ccc; border:0; border-radius:60px; content:''; position:absolute; top:0; left:0; display:inline-block;}
 .check_ani input[type='checkbox']:checked + em:after {left:22px;}
-
-.select_form select{height:42px; padding:0 20px 0 10px; border:1px solid #e8e5e2;}
 
 .form_group > li + li {padding-top:20px;}
 .form_group .form_tit {margin-top:0; margin-bottom:6px; font-size:14px !important; font-family:'Noto Sans'; line-height:20px !important; text-align:left !important;}

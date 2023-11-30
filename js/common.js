@@ -112,7 +112,7 @@ const scroll_callback = {
 
 /* Input Form */
 function input_btn_chk(e){ // 버튼보이기
-    var icon_button = e.closest('.label_wrap').querySelector('button')
+    var icon_button = e.closest('.input').querySelector('button')
     if(e.value.length>0){
         icon_button.style.cssText="display:block;"
     }else{
@@ -120,7 +120,7 @@ function input_btn_chk(e){ // 버튼보이기
     }    
 }//function input_btn_chk()
 function input_btn_fn(e){ // del 클릭시, input 내용 삭제
-    var input = e.closest('.label_wrap').querySelector('input');
+    var input = e.closest('.input').querySelector('input');
     input.value = null;
     e.style.display="none";
     e.parentNode.querySelector('i').style.display="block";
@@ -128,7 +128,7 @@ function input_btn_fn(e){ // del 클릭시, input 내용 삭제
 function input_btn_chg(){
     var icon_pss = document.querySelector('button.icon_pss')
     var input_password = document.querySelector('input.password')
-    console.log(icon_pss,input_password)
+    // console.log(icon_pss,input_password)
     icon_pss.classList.toggle('active');
     if(icon_pss.classList.contains('active')){
         
